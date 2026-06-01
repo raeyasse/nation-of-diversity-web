@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>femi9_energy — Handcrafted Candles. Women-Forward Mission.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-logo" onclick="showPage('home')">femi<span>9</span>_energy</div>
+    <div class="nav-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('shop')">Shop</a>
+      <a onclick="showPage('mission')">Our Mission</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </div>
+    <button class="nav-cta" onclick="showPage('shop')">Shop Now</button>
+  </nav>
+
+  <!-- ═══════════ HOME ═══════════ -->
+  <section id="home" class="active">
+
+    <div class="hero">
+      <div class="hero-glow"></div>
+      <p class="hero-eyebrow">Handcrafted with purpose</p>
+      <h1 class="hero-title">Burn bright.<br><em>Give back.</em></h1>
+      <p class="hero-sub">Every candle you light funds feminine care products for women in need. Small flame. Big change.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('shop')">Shop Candles</button>
+        <button class="btn-outline" onclick="showPage('mission')">Our Mission</button>
+      </div>
+    </div>
+
+    <div class="trust-bar">
+      <div class="trust-item"><span class="trust-icon">🕯️</span><span class="trust-label">Hand-poured</span></div>
+      <div class="trust-item"><span class="trust-icon">🌿</span><span class="trust-label">Clean ingredients</span></div>
+      <div class="trust-item"><span class="trust-icon">💛</span><span class="trust-label">Woman-owned</span></div>
+      <div class="trust-item"><span class="trust-icon">♀️</span><span class="trust-label">Gives back</span></div>
+    </div>
+
+    <div class="mission-banner">
+      <strong>50% of every purchase</strong> goes directly toward feminine hygiene products &amp; women's care resources.
+    </div>
+
+    <div class="section-pad" style="background: var(--cream);">
+      <div class="section-header">
+        <p class="section-eyebrow">Our collection</p>
+        <h2 class="section-title">Candles that <em>carry meaning</em></h2>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img" style="background:#f5ede4;"><span>🕯️</span><span class="product-badge">bestseller</span></div>
+          <div class="product-info">
+            <div class="product-name">Sacred Rose</div>
+            <div class="product-scent">Rose · Sandalwood · Musk</div>
+            <div class="product-footer">
+              <span class="product-price">$24</span>
+              <button class="add-btn" onclick="addToCart('Sacred Rose')">Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img" style="background:#ede8f0;"><span>🕯️</span></div>
+          <div class="product-info">
+            <div class="product-name">Lavender Moon</div>
+            <div class="product-scent">Lavender · Vanilla · Cedar</div>
+            <div class="product-footer">
+              <span class="product-price">$22</span>
+              <button class="add-btn" onclick="addToCart('Lavender Moon')">Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img" style="background:#f0ebe2;"><span>🕯️</span><span class="product-badge">new</span></div>
+          <div class="product-info">
+            <div class="product-name">Golden Hour</div>
+            <div class="product-scent">Amber · Citrus · Honey</div>
+            <div class="product-footer">
+              <span class="product-price">$26</span>
+              <button class="add-btn" onclick="addToCart('Golden Hour')">Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img" style="background:#e8ede8;"><span>🕯️</span></div>
+          <div class="product-info">
+            <div class="product-name">Earth &amp; Ember</div>
+            <div class="product-scent">Patchouli · Sage · Smoke</div>
+            <div class="product-footer">
+              <span class="product-price">$24</span>
+              <button class="add-btn" onclick="addToCart('Earth & Ember')">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2.5rem;">
+        <button class="btn-primary" onclick="showPage('shop')">View Full Collection</button>
+      </div>
+    </div>
+
+    <div class="impact-section">
+      <p class="section-eyebrow">Our impact so far</p>
+      <h2 class="section-title">Every flame <em>matters</em></h2>
+      <div class="impact-grid">
+        <div class="impact-item">
+          <span class="impact-num">240+</span>
+          <span class="impact-label">Women supported with care products</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-num">$4.2k</span>
+          <span class="impact-label">Donated to women's health resources</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-num">100%</span>
+          <span class="impact-label">Handmade, small-batch candles</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════ SHOP ═══════════ -->
+  <section id="shop">
+
+    <div class="shop-hero">
+      <h1>The Collection</h1>
+      <p>Every candle is hand-poured in small batches. Proceeds fund women's care.</p>
+    </div>
+
+    <div class="filter-row">
+      <button class="filter-btn active" onclick="setFilter(this)">All</button>
+      <button class="filter-btn" onclick="setFilter(this)">Floral</button>
+      <button class="filter-btn" onclick="setFilter(this)">Earthy</button>
+      <button class="filter-btn" onclick="setFilter(this)">Warm &amp; Sweet</button>
+      <button class="filter-btn" onclick="setFilter(this)">Fresh</button>
+    </div>
+
+    <div class="shop-grid">
+      <div class="product-card">
+        <div class="product-img" style="background:#f5ede4;"><span>🕯️</span><span class="product-badge">bestseller</span></div>
+        <div class="product-info">
+          <div class="product-name">Sacred Rose</div>
+          <div class="product-scent">Rose · Sandalwood · Musk · 8oz</div>
+          <div class="product-footer"><span class="product-price">$24</span><button class="add-btn" onclick="addToCart('Sacred Rose')">Add to cart</button></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img" style="background:#ede8f0;"><span>🕯️</span></div>
+        <div class="product-info">
+          <div class="product-name">Lavender Moon</div>
+          <div class="product-scent">Lavender · Vanilla · Cedar · 8oz</div>
+          <div class="product-footer"><span class="product-price">$22</span><button class="add-btn" onclick="addToCart('Lavender Moon')">Add to cart</button></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img" style="background:#f0ebe2;"><span>🕯️</span><span class="product-badge">new</span></div>
+        <div class="product-info">
+          <div class="product-name">Golden Hour</div>
+          <div class="product-scent">Amber · Citrus · Honey · 10oz</div>
+          <div class="product-footer"><span class="product-price">$26</span><button class="add-btn" onclick="addToCart('Golden Hour')">Add to cart</button></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img" style="background:#e8ede8;"><span>🕯️</span></div>
+        <div class="product-info">
+          <div class="product-name">Earth &amp; Ember</div>
+          <div class="product-scent">Patchouli · Sage · Smoke · 8oz</div>
+          <div class="product-footer"><span class="product-price">$24</span><button class="add-btn" onclick="addToCart('Earth & Ember')">Add to cart</button></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img" style="background:#faf0e6;"><span>🕯️</span></div>
+        <div class="product-info">
+          <div class="product-name">Warm Vanilla</div>
+          <div class="product-scent">Vanilla Bean · Caramel · Musk · 8oz</div>
+          <div class="product-footer"><span class="product-price">$22</span><button class="add-btn" onclick="addToCart('Warm Vanilla')">Add to cart</button></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img" style="background:#e6f0ed;"><span>🕯️</span><span class="product-badge">limited</span></div>
+        <div class="product-info">
+          <div class="product-name">Sage &amp; Sea</div>
+          <div class="product-scent">White Sage · Sea Salt · Eucalyptus · 10oz</div>
+          <div class="product-footer"><span class="product-price">$28</span><button class="add-btn" onclick="addToCart('Sage & Sea')">Add to cart</button></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="shop-note">✦ Free shipping on orders over $45 &nbsp;·&nbsp; Ships within 3–5 business days &nbsp;·&nbsp; Each candle individually wrapped</p>
+
+  </section>
+
+  <!-- ═══════════ MISSION ═══════════ -->
+  <section id="mission">
+
+    <div class="mission-hero">
+      <p class="eyebrow">Why we exist</p>
+      <h1>More than a <em>candle</em></h1>
+      <p>Behind every flame is a commitment to uplift women who lack access to basic care.</p>
+    </div>
+
+    <div class="mission-cards">
+      <div class="mission-card">
+        <span class="mission-card-icon">🩹</span>
+        <h3>Feminine Care</h3>
+        <p>Proceeds fund menstrual products, pads, tampons, and feminine hygiene essentials for women in shelters and underserved communities.</p>
+      </div>
+      <div class="mission-card">
+        <span class="mission-card-icon">💊</span>
+        <h3>Health Resources</h3>
+        <p>We partner with local clinics and nonprofits to ensure women get access to reproductive health education and basic care supplies.</p>
+      </div>
+      <div class="mission-card">
+        <span class="mission-card-icon">🤝</span>
+        <h3>Community First</h3>
+        <p>Every batch is poured locally. We keep the supply chain close so we can invest more directly into the women we serve.</p>
+      </div>
+    </div>
+
+    <div class="mission-cta-block">
+      <p class="section-eyebrow">The model</p>
+      <h2>You buy. <em>She receives.</em></h2>
+      <p>50% of every candle purchase goes directly into our women's care fund. No middlemen. No bureaucracy. Just impact.</p>
+      <button class="btn-primary" onclick="showPage('shop')">Shop &amp; Give Back</button>
+    </div>
+
+  </section>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section id="about">
+
+    <div class="about-grid">
+      <div class="about-visual">🕯️</div>
+      <div class="about-text">
+        <p class="eyebrow">Our story</p>
+        <h2>Born from <em>passion</em> &amp; purpose</h2>
+        <p>femi9_energy started in a kitchen with a pot, some wax, and a big vision — candles that do more than smell good.</p>
+        <p>Every candle is hand-poured in small batches with love, intention, and clean ingredients. No corners cut. No shortcuts taken.</p>
+        <p>As a woman-owned small business, we know firsthand how powerful community care can be — and we're committed to channeling that energy into every pour.</p>
+        <button class="btn-primary" style="margin-top:0.75rem;" onclick="showPage('mission')">See Our Mission</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section id="contact">
+
+    <div class="contact-wrap">
+      <h2>Get in <em>touch</em></h2>
+      <p class="contact-sub">Questions about an order, wholesale inquiries, or just want to say hello — we'd love to hear from you.</p>
+      <div class="form-group">
+        <label>Your name</label>
+        <input type="text" placeholder="e.g. Maya Johnson" />
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" placeholder="you@email.com" />
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select>
+          <option>Order question</option>
+          <option>Wholesale / bulk order</option>
+          <option>Donation partnership</option>
+          <option>Just saying hi</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Tell us what's on your mind..."></textarea>
+      </div>
+      <button class="submit-btn" onclick="showToast('Message sent! We\'ll be in touch soon 🕯️')">Send Message</button>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo" onclick="showPage('home')">femi<span>9</span>_energy</div>
+    <div class="footer-tagline">Handcrafted candles. Women-forward mission.</div>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('shop')">Shop</a>
+      <a onclick="showPage('mission')">Mission</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="footer-copy">© 2024 femi9_energy &nbsp;·&nbsp; All proceeds support women's care</div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
