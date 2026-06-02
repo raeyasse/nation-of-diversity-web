@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;1,300&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -10,7 +10,7 @@
   --ink: #2a1a1a;
   --body: rgba(42,26,26,0.55);
   --hairline: rgba(42,26,26,0.1);
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -35,7 +35,7 @@ button {
 }
 
 nav {
-  height: 54px;
+  min-height: 68px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,6 +54,15 @@ nav {
   color: var(--ink);
   letter-spacing: -0.01em;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.nav-logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-logo span,
@@ -296,24 +305,21 @@ section.active { display: block; }
 
 .product-img {
   width: 100%;
-  height: 174px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 260px;
   position: relative;
-  background: color-mix(in srgb, var(--lavender) 20%, var(--floral)) !important;
+  overflow: hidden;
   border-bottom: 0.5px solid var(--lavender);
 }
 
 .product-card:nth-child(even) .product-img {
-  background: color-mix(in srgb, var(--cyan) 20%, var(--floral)) !important;
   border-bottom-color: var(--cyan);
 }
 
 .product-candle-img {
-  width: min(78%, 140px);
-  max-height: 140px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -331,15 +337,15 @@ section.active { display: block; }
   font-weight: 400;
 }
 
-.product-info { padding: 1.1rem; }
+.product-info { padding: 1rem 1rem 1.1rem; }
 
 .product-name {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 300;
   color: var(--ink);
   letter-spacing: -0.01em;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
 }
 
 .product-scent,
@@ -357,12 +363,20 @@ section.active { display: block; }
   line-height: 1.85;
 }
 
+.product-scent {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .product-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 0.9rem;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 0.5px solid var(--hairline);
 }
 
 .product-price {
@@ -463,7 +477,7 @@ section.active { display: block; }
 }
 
 .shop-grid {
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   max-width: 900px;
   margin: 2rem auto 0;
 }
@@ -580,51 +594,82 @@ section.active { display: block; }
 
 footer {
   background: var(--floral);
-  color: var(--ink);
-  padding: 3rem 2.5rem 2rem;
-  text-align: center;
   border-top: 0.5px solid var(--hairline);
+  padding: 3rem 2.5rem 2.5rem;
 }
 
-.footer-logo {
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 0.5px solid var(--hairline);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-col--brand { gap: 1rem; }
+
+.footer-col-label {
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  font-weight: 400;
+  margin-bottom: 0.35rem;
+}
+
+.footer-col a {
+  font-size: 13px;
+  color: var(--body);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.footer-col a:hover { color: var(--ink); }
+
+.footer-mission {
   font-family: var(--font-display);
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   font-weight: 300;
   letter-spacing: -0.01em;
   color: var(--ink);
-  margin-bottom: 0.5rem;
-  cursor: pointer;
+  line-height: 1.3;
 }
 
-.footer-tagline {
-  font-size: 14px;
-  color: var(--body);
-  font-weight: 300;
-  margin-bottom: 1.8rem;
-}
-
-.footer-links {
-  display: flex;
-  gap: 1.8rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 1.8rem;
-}
-
-.footer-links a {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink);
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 400;
-}
-
-.footer-copy {
+.footer-copy-small {
   font-size: 12px;
   color: var(--body);
   font-weight: 300;
+  line-height: 1.7;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: var(--body);
+  font-weight: 300;
+  letter-spacing: 0.04em;
 }
 
 .toast {
@@ -673,6 +718,8 @@ footer {
   .trust-bar { grid-template-columns: repeat(2, 1fr); }
   .trust-item:nth-child(3) { border-left: 0; border-top: 0.5px solid var(--hairline); }
   .trust-item:nth-child(4) { border-top: 0.5px solid var(--hairline); }
-  .about-grid { grid-template-columns: 1fr; }
-  .about-text { padding: 1.5rem 0 0; }
+.about-grid { grid-template-columns: 1fr; }
+.about-text { padding: 1.5rem 0 0; }
+.footer-top { grid-template-columns: 1fr 1fr; }
+.footer-col--brand { grid-column: 1 / -1; }
 }

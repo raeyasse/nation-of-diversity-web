@@ -6,14 +6,15 @@
   <title>femi9_energy — Handcrafted Candles. Women-Forward Mission.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAVIGATION -->
   <nav>
-    <div class="nav-logo" onclick="showPage('home')">femi<span>9</span>_energy</div>
+    <div class="nav-logo" onclick="showPage('home')"><img src="images/logo.png" alt="" class="nav-logo-img">femi<span>9</span>_energy</div>
     <div class="nav-links">
       <a onclick="showPage('home')">Home</a>
       <a onclick="showPage('shop')">Shop</a>
@@ -39,10 +40,30 @@
     </div>
 
     <div class="trust-bar">
-      <div class="trust-item"><span class="trust-icon">🕯️</span><span class="trust-label">Hand-poured</span></div>
-      <div class="trust-item"><span class="trust-icon">🌿</span><span class="trust-label">Clean ingredients</span></div>
-      <div class="trust-item"><span class="trust-icon">💛</span><span class="trust-label">Woman-owned</span></div>
-      <div class="trust-item"><span class="trust-icon">♀️</span><span class="trust-label">Gives back</span></div>
+      <div class="trust-item">
+        <span class="trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3s-1 2.5-1 5.5 1 4 1 4-1 1-1 3 1 3 1 3"/><path d="M9.5 8.5s-2 1.5-2 4 2 3.5 4.5 3.5 4.5-1 4.5-3.5-2-4-2-4"/><ellipse cx="12" cy="20" rx="2.5" ry="1"/></svg>
+        </span>
+        <span class="trust-label">Hand-poured</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22V12"/><path d="M8 17l4-5 4 5"/><path d="M7 10.5A5 5 0 0 1 12 5a5 5 0 0 1 5 5.5"/></svg>
+        </span>
+        <span class="trust-label">Clean ingredients</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-1.5A5.5 5.5 0 0 1 11 14h2a5.5 5.5 0 0 1 5.5 5.5V21"/></svg>
+        </span>
+        <span class="trust-label">Woman-owned</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </span>
+        <span class="trust-label">Gives back</span>
+      </div>
     </div>
 
     <div class="mission-banner">
@@ -167,33 +188,9 @@
           <div class="product-footer"><span class="product-price">$26</span><button class="add-btn" onclick="addToCart('Golden Hour')">Add to cart</button></div>
         </div>
       </div>
-      <div class="product-card">
-        <div class="product-img" style="background:#e8ede8;"><img class="product-candle-img" src="images/candle.png" alt="Earth and Ember candle"></div>
-        <div class="product-info">
-          <div class="product-name">Earth &amp; Ember</div>
-          <div class="product-scent">Patchouli · Sage · Smoke · 8oz</div>
-          <div class="product-footer"><span class="product-price">$24</span><button class="add-btn" onclick="addToCart('Earth & Ember')">Add to cart</button></div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img" style="background:#faf0e6;"><img class="product-candle-img" src="images/candle.png" alt="Warm Vanilla candle"></div>
-        <div class="product-info">
-          <div class="product-name">Warm Vanilla</div>
-          <div class="product-scent">Vanilla Bean · Caramel · Musk · 8oz</div>
-          <div class="product-footer"><span class="product-price">$22</span><button class="add-btn" onclick="addToCart('Warm Vanilla')">Add to cart</button></div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img" style="background:#e6f0ed;"><img class="product-candle-img" src="images/candle.png" alt="Sage and Sea candle"><span class="product-badge">limited</span></div>
-        <div class="product-info">
-          <div class="product-name">Sage &amp; Sea</div>
-          <div class="product-scent">White Sage · Sea Salt · Eucalyptus · 10oz</div>
-          <div class="product-footer"><span class="product-price">$28</span><button class="add-btn" onclick="addToCart('Sage & Sea')">Add to cart</button></div>
-        </div>
-      </div>
-    </div>
 
-    <p class="shop-note">✦ Free shipping on orders over $45 &nbsp;·&nbsp; Ships within 3–5 business days &nbsp;·&nbsp; Each candle individually wrapped</p>
+
+    <p class="shop-note">Free shipping on orders over $45 &nbsp;·&nbsp; Ships within 3–5 business days &nbsp;·&nbsp; Each candle individually wrapped</p>
 
   </section>
 
@@ -208,17 +205,23 @@
 
     <div class="mission-cards">
       <div class="mission-card">
-        <span class="mission-card-icon">🩹</span>
+        <span class="mission-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+        </span>
         <h3>Feminine Care</h3>
         <p>Proceeds fund menstrual products, pads, tampons, and feminine hygiene essentials for women in shelters and underserved communities.</p>
       </div>
       <div class="mission-card">
-        <span class="mission-card-icon">💊</span>
+        <span class="mission-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9"/><path d="M9 3v6h6"/><path d="M9 3l6 6"/></svg>
+        </span>
         <h3>Health Resources</h3>
         <p>We partner with local clinics and nonprofits to ensure women get access to reproductive health education and basic care supplies.</p>
       </div>
       <div class="mission-card">
-        <span class="mission-card-icon">🤝</span>
+        <span class="mission-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
         <h3>Community First</h3>
         <p>Every batch is poured locally. We keep the supply chain close so we can invest more directly into the women we serve.</p>
       </div>
@@ -237,7 +240,11 @@
   <section id="about">
 
     <div class="about-grid">
-      <div class="about-visual">🕯️</div>
+      <div class="about-visual">
+        <span class="trust-icon" style="width:64px;height:64px;color:var(--cyan);">
+          <svg viewBox="0 0 24 24"><path d="M12 3s-1 2.5-1 5.5 1 4 1 4-1 1-1 3 1 3 1 3"/><path d="M9.5 8.5s-2 1.5-2 4 2 3.5 4.5 3.5 4.5-1 4.5-3.5-2-4-2-4"/><ellipse cx="12" cy="20" rx="2.5" ry="1"/></svg>
+        </span>
+      </div>
       <div class="about-text">
         <p class="eyebrow">Our story</p>
         <h2>Born from <em>passion</em> &amp; purpose</h2>
@@ -277,23 +284,45 @@
         <label>Message</label>
         <textarea placeholder="Tell us what's on your mind..."></textarea>
       </div>
-      <button class="submit-btn" onclick="showToast('Message sent! We\'ll be in touch soon 🕯️')">Send Message</button>
+      <button class="submit-btn" onclick="showToast('Message sent! We\'ll be in touch soon.')">Send Message</button>
     </div>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo" onclick="showPage('home')">femi<span>9</span>_energy</div>
-    <div class="footer-tagline">Handcrafted candles. Women-forward mission.</div>
-    <div class="footer-links">
-      <a onclick="showPage('home')">Home</a>
-      <a onclick="showPage('shop')">Shop</a>
-      <a onclick="showPage('mission')">Mission</a>
-      <a onclick="showPage('about')">About</a>
-      <a onclick="showPage('contact')">Contact</a>
+    <div class="footer-top">
+      <div class="footer-col footer-col--brand">
+        <p class="footer-mission">Handcrafted candles.<br>Women-forward mission.</p>
+        <p class="footer-copy-small">50% of every purchase funds feminine hygiene products & women's care resources.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Navigate</p>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('shop')">Shop</a>
+        <a onclick="showPage('mission')">Our Mission</a>
+        <a onclick="showPage('about')">About</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Shop</p>
+        <a onclick="showPage('shop')">Sacred Rose</a>
+        <a onclick="showPage('shop')">Lavender Moon</a>
+        <a onclick="showPage('shop')">Golden Hour</a>
+        <a onclick="showPage('shop')">Earth &amp; Ember</a>
+        <a onclick="showPage('shop')">View All</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-label">Contact</p>
+        <a>hello@femi9energy.com</a>
+        <a onclick="showPage('contact')">Send a message</a>
+        <a onclick="showPage('mission')">Partnership inquiries</a>
+      </div>
     </div>
-    <div class="footer-copy">© 2024 femi9_energy &nbsp;·&nbsp; All proceeds support women's care</div>
+    <div class="footer-bottom">
+      <img src="images/logo.png" alt="femi9_energy" class="footer-logo-img" onclick="showPage('home')" />
+      <p class="footer-copy">© 2024 femi9_energy &nbsp;·&nbsp; All proceeds support women's care</p>
+    </div>
   </footer>
 
   <!-- TOAST NOTIFICATION -->
