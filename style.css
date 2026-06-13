@@ -1179,7 +1179,7 @@ nav {
       linear-gradient(180deg, color-mix(in srgb, var(--floral) 92%, transparent) 0%, color-mix(in srgb, var(--floral) 55%, transparent) 45%, color-mix(in srgb, var(--floral) 15%, transparent) 100%),
       url("images/hero.png");
     background-size: cover;
-    background-position: center;
+    background-position: left center;
   }
   .hero-text {
     max-width: 100%;
@@ -1192,6 +1192,7 @@ nav {
   .hero-stat {
     max-width: 100%;
   }
+  .hero-subtitle { display: none; }
 }
 
 .hero-text .hero-stat { display: none; }
