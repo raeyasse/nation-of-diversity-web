@@ -6,6 +6,14 @@ function showPage(id) {
     el.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+  document.querySelector('.nav-links').classList.remove('open');
+  document.querySelector('.nav-toggle').classList.remove('open');
+}
+
+// ── MOBILE NAV TOGGLE ──
+function toggleNav() {
+  document.querySelector('.nav-links').classList.toggle('open');
+  document.querySelector('.nav-toggle').classList.toggle('open');
 }
 
 // ── TOAST NOTIFICATION ──

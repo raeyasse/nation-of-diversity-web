@@ -9,7 +9,7 @@
   --cyan: #048A81;
   --ink: #2a1a1a;
   --body: rgba(42,26,26,0.55);
-  --hairline: rgba(42,26,26,0.1);
+  --hairline: rgba(42,26,26,0.22);
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', sans-serif;
 }
@@ -46,7 +46,6 @@ nav {
   top: 0;
   z-index: 100;
 }
-
 .nav-logo {
   font-family: var(--font-display);
   font-size: 1.35rem;
@@ -88,6 +87,31 @@ nav {
 
 .nav-links a:hover { color: var(--ink); }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--ink);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
 .nav-cta,
 .btn-primary,
 .submit-btn {
@@ -127,7 +151,7 @@ section.active { display: block; }
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 86vh;
+  min-height: 78vh;
   background:
     linear-gradient(100deg, color-mix(in srgb, var(--floral) 92%, transparent) 0%, color-mix(in srgb, var(--floral) 45%, transparent) 35%, color-mix(in srgb, var(--floral) 5%, transparent) 75%),
     url("images/hero.png");
@@ -180,6 +204,19 @@ section.active { display: block; }
   margin-bottom: 1.4rem;
 }
 
+.hero-subtitle {
+  font-size: 17px;
+  color: var(--ink);
+  opacity: 0.75;
+  max-width: 480px;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle span {
+  color: var(--raspberry);
+  font-style: italic;
+}
+
 .hero-title em,
 .section-title em,
 .mission-hero h1 em,
@@ -195,7 +232,7 @@ section.active { display: block; }
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-top: 2.25rem;
+  margin-top: 0.75rem;
 }
 
 .hero-stat {
@@ -208,7 +245,7 @@ section.active { display: block; }
 }
 
 .founder-section {
-  padding: 4.5rem 2.5rem;
+  padding: 3rem 2.5rem;
   border-top: 0.5px solid var(--hairline);
   background: var(--floral);
 }
@@ -304,7 +341,7 @@ section.active { display: block; }
 .founder-text p strong { color: var(--ink); font-weight: 500; }
 
 .collab-section {
-  padding: 4.5rem 2.5rem;
+  padding: 3rem 2.5rem;
   text-align: center;
   border-top: 0.5px solid var(--hairline);
   background: var(--floral);
@@ -436,7 +473,7 @@ section.active { display: block; }
 }
 
 .closing-section {
-  padding: 5.5rem 2.5rem;
+  padding: 3.5rem 2.5rem;
   text-align: center;
   border-top: 0.5px solid var(--hairline);
   background: color-mix(in srgb, var(--lavender) 8%, var(--floral));
@@ -532,7 +569,7 @@ section.active { display: block; }
   background: var(--floral);
 }
 
-.section-pad { padding: 4.5rem 2.5rem; }
+.section-pad { padding: 3rem 2.5rem; }
 
 .section-header {
   text-align: center;
@@ -670,7 +707,7 @@ section.active { display: block; }
 }
 
 .impact-section {
-  padding: 4.5rem 2.5rem;
+  padding: 3rem 2.5rem;
   text-align: center;
   border-top: 0.5px solid var(--hairline);
 }
@@ -696,7 +733,7 @@ section.active { display: block; }
 .shop-hero,
 .mission-hero {
   background: var(--floral);
-  padding: 4.5rem 2.5rem 3rem;
+  padding: 3rem 2.5rem 2rem;
   text-align: center;
   border-bottom: 0.5px solid var(--hairline);
 }
@@ -781,7 +818,7 @@ section.active { display: block; }
 }
 
 .mission-cta-block {
-  padding: 4.5rem 2.5rem;
+  padding: 3rem 2.5rem;
   text-align: center;
   border-top: 0.5px solid var(--hairline);
 }
@@ -795,7 +832,7 @@ section.active { display: block; }
   align-items: stretch;
   max-width: 960px;
   margin: 0 auto;
-  padding: 4.5rem 2.5rem;
+  padding: 3rem 2.5rem;
 }
 
 .about-visual {
@@ -822,7 +859,7 @@ section.active { display: block; }
 .contact-wrap {
   max-width: 600px;
   margin: 0 auto;
-  padding: 4.5rem 2.5rem;
+  padding: 3rem 2.5rem;
 }
 
 .contact-wrap h2 { margin-bottom: 0.65rem; }
@@ -961,7 +998,32 @@ footer {
 
 @media (max-width: 720px) {
   nav { padding: 0 1.2rem; }
-  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .nav-toggle { display: flex; flex-shrink: 0; }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--floral);
+    border-bottom: 0.5px solid var(--hairline);
+    padding: 1.25rem 1.2rem;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
   .hero,
   .section-pad,
   .impact-section,
@@ -1129,6 +1191,27 @@ nav {
   }
   .hero-stat {
     max-width: 100%;
+  }
+}
+
+.hero-text .hero-stat { display: none; }
+
+.hero-stat-strip {
+  display: block;
+  background: var(--raspberry);
+  color: var(--floral);
+  padding: 0.6rem 1.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero-stat-strip {
+    padding: 1.1rem 1.5rem;
+    font-size: 16px;
+    text-align: left;
   }
 }
 
